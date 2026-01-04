@@ -1,0 +1,35 @@
+/* .stats {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0px 20px;
+}
+
+.stat-item {
+  padding: 40px 30px;
+  border-radius: 18px;
+  text-align: center;
+  width: 220px;
+  transition: transform 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.stat-item:hover {
+  transform: translateY(-10px) scale(1.05);
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 800;
+  color: #00f2fe;
+  display: block;
+  margin-bottom: 10px;
+  text-shadow: 0 0 15px rgba(0, 242, 254, 0.6);
+}
+
+.stat-label {
+  font-size: 18px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  opacity: 0.9;
+} */

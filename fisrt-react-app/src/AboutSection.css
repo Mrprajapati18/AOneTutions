@@ -1,0 +1,328 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.about-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 1400px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  animation: fadeIn 1s ease-in;
+}
+
+/* ========== LEFT IMAGE SECTION ========== */
+
+.about-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.student-img-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 450px;
+  height: 550px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+  animation: float 4s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+
+.student-img-wrapper:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.student-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========== RIGHT CONTENT SECTION ========== */
+
+.about-content {
+  padding: 20px;
+  animation: slideInRight 0.8s ease-out;
+}
+
+.small-title {
+  color: #667eea;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin-bottom: 30px;
+  animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.about-para {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.about-para:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.about-para:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+.about-para:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.read-btn {
+  margin-top: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.8s ease-out 1.2s both;
+  overflow: hidden;
+  position: relative;
+}
+
+.read-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s ease;
+}
+
+.read-btn:hover::before {
+  left: 100%;
+}
+
+.read-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+}
+
+.read-btn:active {
+  transform: translateY(-1px);
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.read-btn:hover .arrow-icon {
+  transform: translateX(5px);
+  animation: arrowBounce 0.6s ease-in-out infinite;
+}
+
+/* ========== ANIMATIONS ========== */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes arrowBounce {
+  0%, 100% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 1200px) {
+  .about-container {
+    gap: 60px;
+  }
+
+  .circle-bg {
+    width: 400px;
+    height: 400px;
+  }
+
+  .student-img-wrapper {
+    width: 380px;
+    height: 480px;
+  }
+
+  .main-title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .about-image {
+    justify-content: center;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .read-btn {
+    margin: 20px auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 20px;
+  }
+
+  .circle-bg {
+    width: 320px;
+    height: 320px;
+  }
+
+  .student-img-wrapper {
+    width: 300px;
+    height: 400px;
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
+
+  .about-para {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 40px 15px;
+  }
+
+  .circle-bg {
+    width: 280px;
+    height: 280px;
+  }
+
+  .student-img-wrapper {
+    width: 260px;
+    height: 350px;
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .small-title {
+    font-size: 16px;
+  }
+
+  .about-para {
+    font-size: 14px;
+  }
+
+  .read-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 30px;
+  }
+}
