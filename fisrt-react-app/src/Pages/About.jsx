@@ -1,41 +1,9 @@
-import React from 'react';
 
+import React from 'react';
+import "./About.css";
 function About() {
   return (
     <div className="about-page">
-      <nav>
-        <div className="logo">
-          <div className="logo-icon">A</div>
-          <div className="logo-text">
-            <h1>A One Tuitions</h1>
-            <p>Study with best tutors India</p>
-          </div>
-        </div>
-
-        <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="About">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#packages">Packages</a></li>
-          <li><a href="#register">Register</a></li>
-          <li><a href="#pay">Pay Online</a></li>
-          <li>
-            <div className="reviews-badge">
-              <span className="stars">★★★★★</span>
-              <span className="rating">4.3/5</span>
-            </div>
-          </li>
-          <li><a href="#demo">Book Demo</a></li>
-        </ul>
-
-        <button className="contact-btn">Contact Us</button>
-
-        <div className="mobile-menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
 
       <div className="container">
         {/* Hero Section */}

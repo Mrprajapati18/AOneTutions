@@ -14,8 +14,10 @@ import ExpertsSection from './ExpertsSection.jsx'
 import PricingTestimonials from './PricingTestimonials.jsx'
 import Footer from './Footer.jsx'
 import Stats from './Stats.jsx'
+import Navbar from './Components/Navbar.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Navbar/>
     <Home />
      {/* <Stats /> */}
     <SubjectsPage />
