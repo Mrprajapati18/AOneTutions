@@ -6,7 +6,6 @@ function About() {
     <div className="about-page">
 
       <div className="container">
-        {/* Hero Section */}
         <section className="hero-section">
           <div className="hero-content">
             <div className="hero-image">
@@ -63,8 +62,6 @@ function About() {
               <h3 className="course-title">Physics Tuition</h3>
               <p className="course-description">8th, 9th, 10th, 11th, 12th, IITJEE (main/advance), NEET, B.Tech</p>
             </div>
-
-            {/* Chemistry Tuition */}
             <div className="course-card">
               <div className="course-image">
                 <img 
@@ -75,8 +72,6 @@ function About() {
               <h3 className="course-title">Chemistry Tuition</h3>
               <p className="course-description">8th, 9th, 10th, 11th, 12th, IITJEE (main/advance), NEET, B.Tech</p>
             </div>
-
-            {/* B.Tech Tuition */}
             <div className="course-card">
               <div className="course-image">
                 <img 
@@ -99,8 +94,6 @@ function About() {
               <h3 className="course-title">Humanities Tuition</h3>
               <p className="course-description">All Humanities Subjects</p>
             </div>
-
-            {/* BBA/MBA Tuition */}
             <div className="course-card">
               <div className="course-image">
                 <img 
