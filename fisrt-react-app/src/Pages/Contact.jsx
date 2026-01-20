@@ -36,35 +36,30 @@ function Contact() {
           {/* Contact Info Section */}
           <div className="contact-info">
             <div className="info-card">
-              <div className="info-icon">📞</div>
-              <h3>Phone</h3>
+              <h3> 📞 Phone</h3>
               <p>+91 9876543210</p>
               <p>+91 9876543211</p>
             </div>
 
             <div className="info-card">
-              <div className="info-icon">✉️</div>
-              <h3>Email</h3>
+              <h3> ✉️ Email</h3>
               <p>info@aonetuitions.com</p>
               <p>support@aonetuitions.com</p>
             </div>
 
             <div className="info-card">
-              <div className="info-icon">📍</div>
-              <h3>Address</h3>
+              <h3> 📍 Address</h3>
               <p>123, Education Street</p>
               <p>New Delhi, India - 110001</p>
             </div>
 
             <div className="info-card">
-              <div className="info-icon">⏰</div>
-              <h3>Working Hours</h3>
+              <h3> ⏰ Working Hours</h3>
               <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
               <p>Sunday: 10:00 AM - 6:00 PM</p>
             </div>
           </div>
-
-          {/* Contact Form Section */}
+          
           <div className="contact-form-section">
             <h2>Send us a Message</h2>
             <form onSubmit={handleSubmit} className="contact-form">

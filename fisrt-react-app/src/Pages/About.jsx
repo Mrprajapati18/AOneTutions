@@ -15,20 +15,20 @@ function About() {
               />
             </div>
             <div className="hero-text">
-              <h1 className="main-heading">Begin Your Learning With Excellent Tutions</h1>
+              <h1 className="main-heading">Begin Your Learning With A One Tutions</h1>
               <p className="hero-description">
                 In the digital era, online learning has become the new norm. With the click of a button, we can now access a
                 wealth of knowledge that was once only available in libraries or at the feet of masters.
               </p>
               <p className="hero-description">
-                Excellent Tutions is the perfect platform for both students and tutors. As a tutor, you can set your own
+                A One Tutions is the perfect platform for both students and tutors. As a tutor, you can set your own
                 rates and schedule, and take on as many or as few students as you want. The process is simple and
                 convenient, and you can get started today. As a student, you can search for tutors who are experts in the
                 subjects you need help with.
               </p>
               <p className="hero-description">
-                Excellent Tutions is the ultimate online learning and teaching platform. It connects tutors and learners
-                from all over India in a safe and secure environment. With Excellent Tutions, you can be sure that you are
+                A One Tutions is the ultimate online learning and teaching platform. It connects tutors and learners
+                from all over India in a safe and secure environment. With A One Tutions, you can be sure that you are
                 getting the best possible education and training.
               </p>
             </div>
@@ -124,7 +124,7 @@ function About() {
               <h3 className="feature-title">Experience</h3>
               <p className="feature-description">
                 While book notes and friends can be helpful, not all of them are as effective as excellent tutors. When you
-                learn with experienced tutors at Excellent Tutions, you gain deep knowledge and a clear understanding. Our
+                learn with experienced tutors at A One Tutions, you gain deep knowledge and a clear understanding. Our
                 excellent teachers provide a greater benefit to students.
               </p>
             </div>
@@ -167,108 +167,6 @@ function About() {
           </div>
         </section>
       </div>
-
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-col">
-            <h3>About Us</h3>
-            <span className="line"></span>
-            <p>
-              A One Tuitions is an online education portal that helps in
-              connecting a student seeking home tutor and the teacher searching
-              for a home tuition job. We are a growing family of almost
-              10000+ tutors and students who are happily enjoying the art of
-              learning from a personalized tutor.
-            </p>
-            <br />
-            <h3>Follow Us</h3>
-            <span className="line"></span>
-            <div className="social-icons">
-              <a href="#"><span>📘</span></a>
-              <a href="#"><span>💬</span></a>
-              <a href="#"><span>🐦</span></a>
-              <a href="#"><span>💼</span></a>
-              <a href="#"><span>▶️</span></a>
-              <a href="#"><span>📷</span></a>
-            </div>
-          </div>
-          <div className="footer-col">
-            <h3>Popular Languages</h3>
-            <span className="line"></span>
-            <ul>
-              <li>Hindi</li>
-              <li>English</li>
-              <li>Punjabi</li>
-              <li>Gujarati</li>
-              <li>Marathi</li>
-              <li>Bangla</li>
-              <li>Malayalam</li>
-              <li>Spanish</li>
-              <li>French</li>
-            </ul>
-          </div>
-          <div className="footer-col">
-            <h3>Quick Links</h3>
-            <span className="line"></span>
-            <ul>
-              <li>Home</li>
-              <li>About Us</li>
-              <li>Services</li>
-              <li>Packages</li>
-              <li>Contact Us</li>
-              <li>Terms and Conditions</li>
-              <li>Privacy Policy</li>
-              <li>Refund Policy</li>
-            </ul>
-          </div>
-          <div className="footer-col">
-            <h3>Popular Subjects</h3>
-            <span className="line"></span>
-            <ul>
-              <li>English</li>
-              <li>Mathematics</li>
-              <li>Physics</li>
-              <li>Chemistry</li>
-              <li>Biology</li>
-              <li>Psychology</li>
-              <li>Philosophy</li>
-              <li>Computer</li>
-              <li>Social Science</li>
-              <li>French</li>
-            </ul>
-          </div>
-          <div className="footer-col">
-            <h3>Contact Us</h3>
-            <span className="line"></span>
-            <p>
-              <span className="info-icon">✉️</span>
-              info@aonetutions.com
-            </p>
-            <p>
-              <span className="info-icon">📍</span>
-              Friends Enclave Rajendra Park Extension Nangloi, Delhi 110041
-            </p>
-            <p>
-              <span className="info-icon">📞</span>
-              +91-xxxxxxxxxx
-            </p>
-            <br />
-            <div className="location-box">
-              <div className="map-live">
-                <iframe
-                  src="https://www.google.com/maps?q=Friends%20Enclave%20Rajendra%20Park%20Extension%20Nangloi%20Delhi%20110041&output=embed"
-                  loading="lazy"
-                  title="Location Map"
-                  style={{ width: '100%', height: '200px', border: 0 }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="footer-bottom">
-          © 2025 A One Tuition. All Rights Reserved.
-        </div>
-      </footer>
     </div>
   );
 }
