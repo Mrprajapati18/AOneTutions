@@ -4,8 +4,6 @@ const AboutSection = () => {
   return (
     <section className="about-section">
       <div className="about-container">
-        
-        {/* LEFT IMAGE */}
         <div className="about-image">
           <div className="circle-bg"></div>
           <div className="student-img-wrapper">

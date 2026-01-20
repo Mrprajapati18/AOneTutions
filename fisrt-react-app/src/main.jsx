@@ -35,6 +35,7 @@ import './index.css'
 import './App.css'
 import './SubjectsPage.css'
 import './AboutSection.css'
+import About from './Pages/About.jsx'
 import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(

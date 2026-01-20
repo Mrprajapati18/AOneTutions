@@ -24,8 +24,6 @@
   animation: fadeIn 1s ease-in;
 }
 
-/* ========== LEFT IMAGE SECTION ========== */
-
 .about-image {
   position: relative;
   display: flex;

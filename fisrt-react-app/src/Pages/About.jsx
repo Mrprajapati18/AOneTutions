@@ -1,168 +1,453 @@
+// import React, { useEffect, useRef, useState } from "react";
+// import "./About.css";
 
-import React from 'react';
+// function About() {
+//   const [isVisible, setIsVisible] = useState({
+//     hero: false,
+//     subjects: false,
+//   });
+
+//   const heroRef = useRef(null);
+//   const subjectsRef = useRef(null);
+
+//   useEffect(() => {
+//     const observerOptions = {
+//       threshold: 0.1,
+//       rootMargin: "0px 0px -50px 0px",
+//     };
+
+//     const observerCallback = (entries) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           if (entry.target === heroRef.current) {
+//             setIsVisible((prev) => ({ ...prev, hero: true }));
+//           } else if (entry.target === subjectsRef.current) {
+//             setIsVisible((prev) => ({ ...prev, subjects: true }));
+//           }
+//         }
+//       });
+//     };
+
+//     const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+//     if (heroRef.current) observer.observe(heroRef.current);
+//     if (subjectsRef.current) observer.observe(subjectsRef.current);
+
+//     return () => observer.disconnect();
+//   }, []);
+
+//   const subjects = [
+//     "Accounts",
+//     "Biology",
+//     "Hindi",
+//     "Chemistry",
+//     "Geography",
+//     "Mathematics",
+//     "Commerce",
+//     "Economics",
+//     "English",
+//     "History",
+//     "Science",
+//     "Sanskrit",
+//     "Social Science",
+//     "Biotechnology",
+//     "Polity",
+//     "Music",
+//     "Others",
+//   ];
+
+//   const graduationOptions = ["BA", "B.SC", "Others"];
+//   const competitionOptions = ["IIT", "NEET", "Banking", "Others"];
+
+//   const handleSubjectClick = (subject) => {
+//     console.log(`Selected subject: ${subject}`);
+//   };
+
+//   const handleGraduationClick = (option) => {
+//     console.log(`Selected graduation: ${option}`);
+//   };
+
+//   const handleCompetitionClick = (option) => {
+//     console.log(`Selected competition: ${option}`);
+//   };
+
+//   return (
+//     <div className="about-page">
+//       <div className="container">
+       
+//         <section
+//           ref={heroRef}
+//           className={`hero-section ${isVisible.hero ? "animate" : ""}`}
+//         >
+//           <div className="hero-content">
+//             <div className="hero-image">
+//               <img
+//                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop"
+//                 alt="Students Learning"
+//                 loading="lazy"
+//               />
+//             </div>
+//             <div className="hero-text">
+//               <h1 className="main-heading">
+//                 Begin Your Learning With A One Tutions
+//               </h1>
+//               <p className="hero-description">
+//                 In the digital era, online learning has become the new norm.
+//                 With the click of a button, we can now access a wealth of
+//                 knowledge that was once only available in libraries or at the
+//                 feet of masters.
+//               </p>
+//               <p className="hero-description">
+//                 A One Tutions is the perfect platform for both students and
+//                 tutors. As a tutor, you can set your own rates and schedule, and
+//                 take on as many or as few students as you want. The process is
+//                 simple and convenient, and you can get started today. As a
+//                 student, you can search for tutors who are experts in the
+//                 subjects you need help with.
+//               </p>
+//               <p className="hero-description">
+//                 A One Tutions is the ultimate online learning and teaching
+//                 platform. It connects tutors and learners from all over India in
+//                 a safe and secure environment. With A One Tutions, you can be
+//                 sure that you are getting the best possible education and
+//                 training.
+//               </p>
+//             </div>
+//           </div>
+//         </section>
+
+//         {/* Subjects Section */}
+//         <section
+//           ref={subjectsRef}
+//           className={`subjects-main-section ${
+//             isVisible.subjects ? "animate" : ""
+//           }`}
+//         >
+//           <h2 className="section-title">Subjects We Provide</h2>
+
+//           <div className="subjects-section">
+//             <div className="subjects-grid">
+//               {subjects.map((subject, index) => (
+//                 <button
+//                   key={index}
+//                   className="subject-btn"
+//                   onClick={() => handleSubjectClick(subject)}
+//                   style={{
+//                     animationDelay: `${index * 0.05}s`,
+//                   }}
+//                 >
+//                   {subject}
+//                 </button>
+//               ))}
+//             </div>
+//           </div>
+
+//           <div className="section-divider"></div>
+
+//           <div className="options-wrapper">
+//             <div className="option-section">
+//               <h3 className="option-title">Graduation</h3>
+//               <div className="option-grid">
+//                 {graduationOptions.map((option, index) => (
+//                   <button
+//                     key={index}
+//                     className="option-btn"
+//                     onClick={() => handleGraduationClick(option)}
+//                   >
+//                     {option}
+//                   </button>
+//                 ))}
+//               </div>
+//             </div>
+
+//             <div className="option-section">
+//               <h3 className="option-title">Competition</h3>
+//               <div className="option-grid">
+//                 {competitionOptions.map((option, index) => (
+//                   <button
+//                     key={index}
+//                     className="option-btn"
+//                     onClick={() => handleCompetitionClick(option)}
+//                   >
+//                     {option}
+//                   </button>
+//                 ))}
+//               </div>
+//             </div>
+//           </div>
+//         </section>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default About;
+
+import React, { useEffect, useRef, useState } from "react";
 import "./About.css";
+
 function About() {
+  const [isVisible, setIsVisible] = useState({
+    hero: false,
+    courses: false,
+    subjects: false,
+  });
+
+  const heroRef = useRef(null);
+  const coursesRef = useRef(null);
+  const subjectsRef = useRef(null);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target === heroRef.current) {
+            setIsVisible((prev) => ({ ...prev, hero: true }));
+          } else if (entry.target === coursesRef.current) {
+            setIsVisible((prev) => ({ ...prev, courses: true }));
+          } else if (entry.target === subjectsRef.current) {
+            setIsVisible((prev) => ({ ...prev, subjects: true }));
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    if (heroRef.current) observer.observe(heroRef.current);
+    if (coursesRef.current) observer.observe(coursesRef.current);
+    if (subjectsRef.current) observer.observe(subjectsRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  const coursesData = [
+    {
+      id: 1,
+      title: "Maths Tuition",
+      description:
+        "6th to 12th, IITJEE (main/advance), B.Com, B.Tech, BBA, MBA, CAT, SAT",
+      image:
+        "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=400&h=300&fit=crop",
+      bgColor: "#f0f4ff",
+    },
+    {
+      id: 2,
+      title: "Physics Tuition",
+      description: "8th, 9th, 10th, 11th, 12th, IITJEE (main/advance), NEET, B.Tech",
+      image:
+        "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop",
+      bgColor: "#fff8f0",
+    },
+    {
+      id: 3,
+      title: "Chemistry Tuition",
+      description: "8th, 9th, 10th, 11th, 12th, IITJEE (main/advance), NEET, B.Tech",
+      image:
+        "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=300&fit=crop",
+      bgColor: "#fff0f0",
+    },
+    {
+      id: 4,
+      title: "B.Tech Tuition",
+      description:
+        "Maths, Physics, Chemistry, Elect. Engg., AI, Mech. Engg, C.S.Engg etc",
+      image:
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop",
+      bgColor: "#f0fff4",
+    },
+    {
+      id: 5,
+      title: "Humanities Tuition",
+      description:
+        "9th, 10th, 11th & 12th, Psychology, Sociology, History, Geography, Political Science.etc",
+      image:
+        "https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=300&fit=crop",
+      bgColor: "#fff0f8",
+    },
+    {
+      id: 6,
+      title: "BBA/MBA Tuition",
+      description:
+        "Business Maths, Business Economics, Financial Accounting, O.B, Marketing Mgt., Financial Mgt. etc",
+      image:
+        "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop",
+      bgColor: "#f8f0ff",
+    },
+  ];
+
+  const subjects = [
+    "Accounts",
+    "Biology",
+    "Hindi",
+    "Chemistry",
+    "Geography",
+    "Mathematics",
+    "Commerce",
+    "Economics",
+    "English",
+    "History",
+    "Science",
+    "Sanskrit",
+    "Social Science",
+    "Biotechnology",
+    "Polity",
+    "Music",
+    "Others",
+  ];
+
+  const graduationOptions = ["BA", "B.SC", "Others"];
+  const competitionOptions = ["IIT", "NEET", "Banking", "Others"];
+
+  const handleSubjectClick = (subject) => {
+    console.log(`Selected subject: ${subject}`);
+  };
+
+  const handleGraduationClick = (option) => {
+    console.log(`Selected graduation: ${option}`);
+  };
+
+  const handleCompetitionClick = (option) => {
+    console.log(`Selected competition: ${option}`);
+  };
+
   return (
     <div className="about-page">
-
       <div className="container">
-        <section className="hero-section">
+        {/* Hero Section */}
+        <section
+          ref={heroRef}
+          className={`hero-section ${isVisible.hero ? "animate" : ""}`}
+        >
           <div className="hero-content">
             <div className="hero-image">
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop"
                 alt="Students Learning"
+                loading="lazy"
               />
             </div>
             <div className="hero-text">
-              <h1 className="main-heading">Begin Your Learning With A One Tutions</h1>
+              <h1 className="main-heading">
+                Begin Your Learning With A One Tutions
+              </h1>
               <p className="hero-description">
-                In the digital era, online learning has become the new norm. With the click of a button, we can now access a
-                wealth of knowledge that was once only available in libraries or at the feet of masters.
+                In the digital era, online learning has become the new norm.
+                With the click of a button, we can now access a wealth of
+                knowledge that was once only available in libraries or at the
+                feet of masters.
               </p>
               <p className="hero-description">
-                A One Tutions is the perfect platform for both students and tutors. As a tutor, you can set your own
-                rates and schedule, and take on as many or as few students as you want. The process is simple and
-                convenient, and you can get started today. As a student, you can search for tutors who are experts in the
+                A One Tutions is the perfect platform for both students and
+                tutors. As a tutor, you can set your own rates and schedule, and
+                take on as many or as few students as you want. The process is
+                simple and convenient, and you can get started today. As a
+                student, you can search for tutors who are experts in the
                 subjects you need help with.
               </p>
               <p className="hero-description">
-                A One Tutions is the ultimate online learning and teaching platform. It connects tutors and learners
-                from all over India in a safe and secure environment. With A One Tutions, you can be sure that you are
-                getting the best possible education and training.
+                A One Tutions is the ultimate online learning and teaching
+                platform. It connects tutors and learners from all over India in
+                a safe and secure environment. With A One Tutions, you can be
+                sure that you are getting the best possible education and
+                training.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Courses Section */}
-        <section className="courses-section">
-          <h2 className="section-title">Courses Categories</h2>
-          <div className="courses-grid">
-            {/* Maths Tuition */}
-            <div className="course-card">
-              <div className="course-image">
-                <img 
-                  src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=400&h=300&fit=crop"
-                  alt="Maths Tuition"
-                />
+        {/* Courses Categories Section */}
+        <section
+          ref={coursesRef}
+          className={`courses-categories-section ${
+            isVisible.courses ? "animate" : ""
+          }`}
+        >
+          <h2 className="courses-main-title">Courses Categories</h2>
+          <div className="courses-categories-grid">
+            {coursesData.map((course, index) => (
+              <div
+                key={course.id}
+                className="category-card"
+                style={{
+                  backgroundColor: course.bgColor,
+                  animationDelay: `${index * 0.1}s`,
+                }}
+              >
+                <div className="category-image">
+                  <img src={course.image} alt={course.title} loading="lazy" />
+                </div>
+                <div className="category-content">
+                  <h3 className="category-title">{course.title}</h3>
+                  <p className="category-description">{course.description}</p>
+                </div>
               </div>
-              <h3 className="course-title">Maths Tuition</h3>
-              <p className="course-description">6th to 12th, IITJEE (main/advance), B.Com, B.Tech, BBA, MBA, CAT, SAT</p>
-            </div>
-
-            {/* Physics Tuition */}
-            <div className="course-card">
-              <div className="course-image">
-                <img 
-                  src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&h=300&fit=crop"
-                  alt="Physics Tuition"
-                />
-              </div>
-              <h3 className="course-title">Physics Tuition</h3>
-              <p className="course-description">8th, 9th, 10th, 11th, 12th, IITJEE (main/advance), NEET, B.Tech</p>
-            </div>
-            <div className="course-card">
-              <div className="course-image">
-                <img 
-                  src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=300&fit=crop"
-                  alt="Chemistry Tuition"
-                />
-              </div>
-              <h3 className="course-title">Chemistry Tuition</h3>
-              <p className="course-description">8th, 9th, 10th, 11th, 12th, IITJEE (main/advance), NEET, B.Tech</p>
-            </div>
-            <div className="course-card">
-              <div className="course-image">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=300&fit=crop"
-                  alt="B.Tech Tuition"
-                />
-              </div>
-              <h3 className="course-title">B.Tech Tuition</h3>
-              <p className="course-description">All Engineering Subjects</p>
-            </div>
-
-            {/* Humanities Tuition */}
-            <div className="course-card">
-              <div className="course-image">
-                <img 
-                  src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=400&h=300&fit=crop"
-                  alt="Humanities Tuition"
-                />
-              </div>
-              <h3 className="course-title">Humanities Tuition</h3>
-              <p className="course-description">All Humanities Subjects</p>
-            </div>
-            <div className="course-card">
-              <div className="course-image">
-                <img 
-                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop"
-                  alt="BBA/MBA Tuition"
-                />
-              </div>
-              <h3 className="course-title">BBA/MBA Tuition</h3>
-              <p className="course-description">All Business Administration Subjects</p>
-            </div>
+            ))}
           </div>
         </section>
 
-        {/* Features Section */}
-        <section className="features-section">
-          <div className="features-grid">
-            {/* Experience */}
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="50" cy="50" r="45" fill="#4A90E2" />
-                  <path d="M30 40 L50 30 L70 40 L70 60 L50 70 L30 60 Z" fill="#FFD700" />
-                  <circle cx="35" cy="45" r="5" fill="#FF6B6B" />
-                  <circle cx="50" cy="40" r="5" fill="#FF6B6B" />
-                  <circle cx="65" cy="45" r="5" fill="#FF6B6B" />
-                </svg>
+        {/* Subjects Section */}
+        <section
+          ref={subjectsRef}
+          className={`subjects-main-section ${
+            isVisible.subjects ? "animate" : ""
+          }`}
+        >
+          <h2 className="section-title">Subjects We Provide</h2>
+
+          <div className="subjects-section">
+            <div className="subjects-grid">
+              {subjects.map((subject, index) => (
+                <button
+                  key={index}
+                  className="subject-btn"
+                  onClick={() => handleSubjectClick(subject)}
+                  style={{
+                    animationDelay: `${index * 0.05}s`,
+                  }}
+                >
+                  {subject}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div className="section-divider"></div>
+
+          <div className="options-wrapper">
+            <div className="option-section">
+              <h3 className="option-title">Graduation</h3>
+              <div className="option-grid">
+                {graduationOptions.map((option, index) => (
+                  <button
+                    key={index}
+                    className="option-btn"
+                    onClick={() => handleGraduationClick(option)}
+                  >
+                    {option}
+                  </button>
+                ))}
               </div>
-              <h3 className="feature-title">Experience</h3>
-              <p className="feature-description">
-                While book notes and friends can be helpful, not all of them are as effective as excellent tutors. When you
-                learn with experienced tutors at A One Tutions, you gain deep knowledge and a clear understanding. Our
-                excellent teachers provide a greater benefit to students.
-              </p>
             </div>
 
-            {/* Education */}
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="30" y="55" width="40" height="5" fill="#2C3E50" />
-                  <path d="M50 30 L70 40 L70 55 L50 65 L30 55 L30 40 Z" fill="#2C3E50" />
-                  <circle cx="50" cy="25" r="8" fill="#FFD700" />
-                </svg>
+            <div className="option-section">
+              <h3 className="option-title">Competition</h3>
+              <div className="option-grid">
+                {competitionOptions.map((option, index) => (
+                  <button
+                    key={index}
+                    className="option-btn"
+                    onClick={() => handleCompetitionClick(option)}
+                  >
+                    {option}
+                  </button>
+                ))}
               </div>
-              <h3 className="feature-title">Education</h3>
-              <p className="feature-description">
-                Many students encounter difficulty when studying. Our tutors have better teaching styles, more knowledge, a
-                more engaging style and more patience with their students. In addition, excellent tutors are generally
-                better teachers and have a better rapport with their students.
-              </p>
-            </div>
-
-            {/* Certificate */}
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="25" y="30" width="50" height="35" rx="3" fill="#E8E8E8" stroke="#2C3E50" strokeWidth="2" />
-                  <circle cx="50" cy="47" r="8" fill="#FFD700" />
-                  <path d="M45 75 L50 85 L55 75" fill="#E74C3C" />
-                  <rect x="30" y="40" width="40" height="2" fill="#2C3E50" />
-                  <rect x="35" y="55" width="30" height="2" fill="#2C3E50" />
-                </svg>
-              </div>
-              <h3 className="feature-title">Certificate</h3>
-              <p className="feature-description">
-                We have made a more thorough learning experience for both students and tutors. Along with learning, you also
-                get certificates for your completed courses or teaching experiences with us. This can add to your growth and
-                career.
-              </p>
             </div>
           </div>
         </section>

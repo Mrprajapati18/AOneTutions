@@ -48,6 +48,8 @@ import Footer from './Footer'
 import Navbar from './Components/Navbar'
 import About from "./Pages/About"
 import Contact from './Pages/Contact'
+import Stats from './Stats'
+import Courses from './Courses'
 
 function App() {
   return (
@@ -57,7 +59,9 @@ function App() {
         <Route path="/" element={
           <>
             <Home />
-            <SubjectsPage />      
+            {/* <SubjectsPage />  */}
+            <Courses />
+            <Stats />
             <AboutSection />
             <ExpertsSection />
             <PricingTestimonials />

@@ -17,18 +17,7 @@ function Home() {
             </p>
 
           <div class="stats">
-          <div class="stat-item">
-            <span class="stat-number">10,000+</span>
-            <span class="stat-label">Active Students</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">500+</span>
-            <span class="stat-label">Expert Tutors</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">Courses</span>
-          </div>
+      
         </div> 
             <div className="cta-buttons">
               <button className="btn-tutor">
@@ -54,10 +43,7 @@ function Home() {
               <img src="/Student/Interactive Session.jpg" alt="Interactive Session" />
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        
+        </div> 
       </section>
      </>
   );
