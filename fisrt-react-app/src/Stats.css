@@ -1,4 +1,4 @@
-/* .stats {
+.stats {
   display: flex;
   justify-content: center;
   gap: 30px;
@@ -32,4 +32,4 @@
   color: #ffffff;
   letter-spacing: 1px;
   opacity: 0.9;
-} */
+}

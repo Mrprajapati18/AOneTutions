@@ -16,7 +16,7 @@ function Home() {
               a wide variety of courses for all ages and levels.
             </p>
 
-            <div class="stats">
+          <div class="stats">
           <div class="stat-item">
             <span class="stat-number">10,000+</span>
             <span class="stat-label">Active Students</span>

@@ -22,8 +22,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
       </Routes>      
     </Router>
-      <Home />
-      {/* <Stats /> */}
+      {/* <Home /> */}
+      <Stats />
       <SubjectsPage />      
       <AboutSection />
       <ExpertsSection />
