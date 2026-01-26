@@ -1,12 +1,9 @@
-
-
 .container {
   max-width: fit-content;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Hero Section */
 .hero-section {
   padding: 0px 40px;
   opacity: 0;
