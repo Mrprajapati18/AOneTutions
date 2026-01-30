@@ -106,7 +106,7 @@ function Navbar() {
             </a>
           </div>
         </li>
-
+        
         <li>
           <div className="reviews-badge">
             <span className="stars">★★★★★</span>
